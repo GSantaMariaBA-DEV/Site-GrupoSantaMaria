@@ -6,6 +6,7 @@ import { Projects } from './components/Projects';
 import { Region } from './components/Region';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 import { WhatsAppBtn } from './components/WhatsAppBtn';
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <FAQ />
         <Contact />
       </main>
+      <Footer />
       <WhatsAppBtn />
     </div>
   );
