@@ -22,139 +22,182 @@ export const Projects: React.FC = () => {
 
   return (
     <section id="empreendimentos" className="bg-brand-sand relative overflow-hidden">
-      
+
       {/* =========================================
           PART 1: THE MAIN EVENT - HEADER
          ========================================= */}
-       <div className="pt-24 pb-12 text-center relative z-10">
-          <span className="bg-brand-gold/10 text-brand-gold px-4 py-2 rounded-full uppercase tracking-[0.2em] text-xs font-bold inline-block mb-4 reveal">
-            O Futuro Chegou
-          </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green reveal">
-            Vila Santa Maria
-          </h2>
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto font-light text-lg reveal">
-            O primeiro bairro planejado de alto padrão em Livramento. <br className="hidden md:block"/> 
-            Infraestrutura pronta para você construir seu sonho.
-          </p>
-       </div>
+      <div className="pt-24 pb-12 text-center relative z-10 px-6">
+        <span className="bg-brand-gold/10 text-brand-gold px-4 py-2 rounded-full uppercase tracking-[0.2em] text-xs font-bold inline-block mb-4 reveal">
+          O Futuro Chegou
+        </span>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green reveal">
+          Vila Santa Maria
+        </h2>
+        <p className="text-gray-500 mt-4 max-w-2xl mx-auto font-light text-lg reveal">
+          O primeiro bairro planejado de alto padrão em Livramento. <br className="hidden md:block" />
+          Infraestrutura pronta para você construir seu sonho.
+        </p>
+      </div>
 
       {/* =========================================
           PART 2: THE SHOWCASE (Dynamic Layout)
          ========================================= */}
       <div className="w-full max-w-[1920px] mx-auto mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[70vh] items-center">
-          
+
           {/* Left: Dynamic Image Carousel (Larger) */}
           <div className="lg:col-span-8 relative h-[50vh] lg:h-[80vh] overflow-hidden group rounded-r-3xl shadow-2xl reveal">
-             {carouselImages.map((src, index) => (
-               <div 
-                 key={index}
-                 className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
-               >
-                 <img 
-                    src={src} 
-                    alt={`Vila Santa Maria View ${index + 1}`} 
-                    className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-linear ${index === currentImage ? 'scale-110' : 'scale-100'}`}
-                  />
-               </div>
-             ))}
+            {carouselImages.map((src, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <img
+                  src={src}
+                  alt={`Vila Santa Maria View ${index + 1}`}
+                  className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-linear ${index === currentImage ? 'scale-110' : 'scale-100'}`}
+                />
+              </div>
+            ))}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-green/30 to-transparent z-10"></div>
-              
-              {/* Floating Status Card */}
-              <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-2xl border-l-4 border-brand-gold z-20 max-w-xs reveal">
-                <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                  </span>
-                  <span className="font-serif font-bold text-xl text-brand-green">Obras Aceleradas</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-green/30 to-transparent z-10"></div>
+
+            {/* Floating Status Card */}
+            <div className="hidden md:block absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-2xl border-l-4 border-brand-gold z-20 max-w-xs reveal">
+              <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="font-serif font-bold text-xl text-brand-green">Obras Aceleradas</span>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Terraplanagem</span>
+                    <span>100%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-gold h-1.5 rounded-full" style={{ width: '100%' }}></div>
+                  </div>
                 </div>
-                <div className="space-y-3">
-                   <div>
-                      <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                        <span>Terraplanagem</span>
-                        <span>100%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                        <div className="bg-brand-gold h-1.5 rounded-full" style={{width: '100%'}}></div>
-                      </div>
-                   </div>
-                   <div>
-                      <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                        <span>Rede de Água</span>
-                        <span>95%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                        <div className="bg-brand-green h-1.5 rounded-full" style={{width: '95%'}}></div>
-                      </div>
-                   </div>
-                   <div>
-                      <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                        <span>Pavimentação</span>
-                        <span>80%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                        <div className="bg-brand-green h-1.5 rounded-full" style={{width: '80%'}}></div>
-                      </div>
-                   </div>
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Rede de Água</span>
+                    <span>95%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Pavimentação</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Carousel Indicators */}
-              <div className="absolute bottom-8 right-8 flex space-x-2 z-20">
-                {carouselImages.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentImage(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-300 shadow-md ${idx === currentImage ? 'w-10 bg-brand-gold' : 'w-5 bg-white/50 hover:bg-white'}`}
-                    aria-label={`View image ${idx + 1}`}
-                  />
-                ))}
+            {/* Carousel Indicators */}
+            <div className="absolute bottom-8 right-8 flex space-x-2 z-20">
+              {carouselImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentImage(idx)}
+                  className={`h-1.5 rounded-full transition-all duration-300 shadow-md ${idx === currentImage ? 'w-10 bg-brand-gold' : 'w-5 bg-white/50 hover:bg-white'}`}
+                  aria-label={`View image ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Status Card (Positioned Below Images) */}
+          <div className="md:hidden px-6 mt-6 relative z-20 reveal">
+            <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm shadow-2xl border-l-4 border-brand-gold w-full max-w-md mx-auto">
+              <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="font-serif font-bold text-xl text-brand-green">Obras Aceleradas</span>
               </div>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Terraplanagem</span>
+                    <span>100%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-gold h-1.5 rounded-full" style={{ width: '100%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Rede de Água</span>
+                    <span>95%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
+                    <span>Pavimentação</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right: Pitch & CTA */}
           <div className="lg:col-span-4 p-10 lg:pl-16 flex flex-col justify-center reveal">
-             <div className="mb-8">
-                <div className="flex items-center gap-3 mb-6">
-                    <Hammer className="text-brand-gold" size={20} />
-                    <span className="text-brand-gold uppercase tracking-widest text-xs font-bold">Construção & Vendas</span>
-                </div>
-                <h3 className="text-4xl font-serif font-medium text-brand-text mb-6">
-                  Seu Patrimônio <br/> 
-                  <span className="text-brand-green">Sólido e Real</span>
-                </h3>
-                <p className="text-gray-600 font-light leading-relaxed mb-6">
-                  O Vila Santa Maria não é uma promessa, é uma realidade. Com localização privilegiada no Bairro Santa Cruz, 
-                  oferecemos lotes a partir de <strong>250m²</strong> com topografia plana, ideais para projetos modernos.
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="text-brand-gold h-5 w-5"/>
-                    <span>Escritura Imediata</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="text-brand-gold h-5 w-5"/>
-                    <span>Financiamento Próprio em até 120x</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="text-brand-gold h-5 w-5"/>
-                    <span>Sem consulta a SPC/Serasa</span>
-                  </li>
-                </ul>
-             </div>
+            <div className="mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Hammer className="text-brand-gold" size={20} />
+                <span className="text-brand-gold uppercase tracking-widest text-xs font-bold">Construção & Vendas</span>
+              </div>
+              <h3 className="text-4xl font-serif font-medium text-brand-text mb-6">
+                Seu Patrimônio <br />
+                <span className="text-brand-green">Sólido e Real</span>
+              </h3>
+              <p className="text-gray-600 font-light leading-relaxed mb-6">
+                O Vila Santa Maria não é uma promessa, é uma realidade. Com localização privilegiada no Bairro Santa Cruz,
+                oferecemos lotes a partir de <strong>250m²</strong> com topografia plana, ideais para projetos modernos.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="text-brand-gold h-5 w-5" />
+                  <span>Escritura Imediata</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="text-brand-gold h-5 w-5" />
+                  <span>Financiamento Próprio em até 120x</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="text-brand-gold h-5 w-5" />
+                  <span>Sem consulta a SPC/Serasa</span>
+                </li>
+              </ul>
+            </div>
 
-             <div className="flex flex-col gap-4">
-                <Button className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform">
-                  Quero Tabela de Preços
-                </Button>
-                <Button variant="outline" className="w-full py-4 text-sm">
-                  Baixar Mapa do Loteamento
-                </Button>
-             </div>
+            <div className="flex flex-col gap-4">
+              <Button className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform">
+                Quero Tabela de Preços
+              </Button>
+              <Button variant="outline" className="w-full py-4 text-sm">
+                Baixar Mapa do Loteamento
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -163,16 +206,16 @@ export const Projects: React.FC = () => {
           PART 3: PARALLAX BREAK (The Emotion)
          ========================================= */}
       <div className="relative h-[60vh] bg-fixed bg-center bg-cover flex items-center justify-center reveal"
-           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=2000')` }}>
-         <div className="absolute inset-0 bg-brand-green/80 mix-blend-multiply"></div>
-         <div className="absolute inset-0 bg-black/30"></div>
-         
-         <div className="relative z-10 text-center px-6 max-w-4xl">
-            <h3 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
-              "A única coisa que eles não estão fazendo mais é terra."
-            </h3>
-            <p className="text-brand-gold text-xl font-serif italic">- Mark Twain</p>
-         </div>
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=2000')` }}>
+        <div className="absolute inset-0 bg-brand-green/80 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <h3 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
+            "A única coisa que eles não estão fazendo mais é terra."
+          </h3>
+          <p className="text-brand-gold text-xl font-serif italic">- Mark Twain</p>
+        </div>
       </div>
 
       {/* =========================================
@@ -180,29 +223,29 @@ export const Projects: React.FC = () => {
          ========================================= */}
       <div className="py-24 px-6 lg:px-12 max-w-[1920px] mx-auto bg-white relative z-10 -mt-20 rounded-t-3xl shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.1)]">
         <div className="text-center mb-16 reveal">
-            <span className="text-brand-green uppercase tracking-[0.2em] text-sm font-bold">Detalhes Técnicos</span>
-            <h3 className="text-3xl font-serif mt-3 text-brand-text">Infraestrutura Entregue</h3>
+          <span className="text-brand-green uppercase tracking-[0.2em] text-sm font-bold">Detalhes Técnicos</span>
+          <h3 className="text-3xl font-serif mt-3 text-brand-text">Infraestrutura Entregue</h3>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
-            {[
-                { icon: ShieldCheck, title: "Segurança", desc: "Bairro planejado com monitoramento" },
-                { icon: TreePine, title: "Paisagismo", desc: "Áreas verdes preservadas" },
-                { icon: MapPin, title: "Ruas Largas", desc: "100% Pavimentadas com meio-fio" },
-                { icon: Zap, title: "Energia", desc: "Rede elétrica completa e iluminação LED" },
-                { icon: Droplets, title: "Água", desc: "Abastecimento Embasa garantido" },
-                { icon: Flower2, title: "Jardinagem", desc: "Canteiros centrais arborizados" },
-                { icon: Footprints, title: "Lazer", desc: "Pista de caminhada integrada" },
-                { icon: Camera, title: "Vista", desc: "Panorâmica para a Serra das Almas" },
-            ].map((item, idx) => (
-                <div key={idx} className="text-center group cursor-default reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-sand mb-6 group-hover:bg-brand-green transition-colors duration-500">
-                        <item.icon className="h-8 w-8 text-brand-green group-hover:text-brand-gold transition-colors duration-500" strokeWidth={1.5} />
-                    </div>
-                    <h4 className="font-serif text-lg text-brand-text mb-2 font-bold">{item.title}</h4>
-                    <p className="text-sm text-gray-500">{item.desc}</p>
-                </div>
-            ))}
+          {[
+            { icon: ShieldCheck, title: "Segurança", desc: "Bairro planejado com monitoramento" },
+            { icon: TreePine, title: "Paisagismo", desc: "Áreas verdes preservadas" },
+            { icon: MapPin, title: "Ruas Largas", desc: "100% Pavimentadas com meio-fio" },
+            { icon: Zap, title: "Energia", desc: "Rede elétrica completa e iluminação LED" },
+            { icon: Droplets, title: "Água", desc: "Abastecimento Embasa garantido" },
+            { icon: Flower2, title: "Jardinagem", desc: "Canteiros centrais arborizados" },
+            { icon: Footprints, title: "Lazer", desc: "Pista de caminhada integrada" },
+            { icon: Camera, title: "Vista", desc: "Panorâmica para a Serra das Almas" },
+          ].map((item, idx) => (
+            <div key={idx} className="text-center group cursor-default reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-sand mb-6 group-hover:bg-brand-green transition-colors duration-500">
+                <item.icon className="h-8 w-8 text-brand-green group-hover:text-brand-gold transition-colors duration-500" strokeWidth={1.5} />
+              </div>
+              <h4 className="font-serif text-lg text-brand-text mb-2 font-bold">{item.title}</h4>
+              <p className="text-sm text-gray-500">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -211,38 +254,38 @@ export const Projects: React.FC = () => {
          ========================================= */}
       <div className="bg-gray-900 py-24 border-t border-gray-800 text-white">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-                <div>
-                    <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
-                    <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
-                </div>
-                <a href="#contato" className="text-brand-gold hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest mt-6 md:mt-0">
-                    Entrar na Lista de Espera <ArrowUpRight size={16} />
-                </a>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+            <div>
+              <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
+              <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
             </div>
+            <a href="#contato" className="text-brand-gold hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest mt-6 md:mt-0">
+              Entrar na Lista de Espera <ArrowUpRight size={16} />
+            </a>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                    { name: "Residencial Serra das Almas", status: "Breve Lançamento", img: "https://images.unsplash.com/photo-1519681393784-d8e5b5a4570e?auto=format&fit=crop&q=80&w=800" },
-                    { name: "Jardins da Mangueira", status: "Em Planejamento", img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800" },
-                    { name: "Portal do Sol", status: "Estudos Finais", img: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&q=80&w=800" },
-                ].map((project, idx) => (
-                    <div key={idx} className="group cursor-pointer relative overflow-hidden rounded-sm reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
-                         <div className="absolute top-4 left-4 z-20 bg-brand-gold text-brand-green text-[10px] font-bold uppercase px-3 py-1 rounded-sm">
-                            {project.status}
-                         </div>
-                        <div className="h-80 overflow-hidden relative">
-                             <img src={project.img} alt={project.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                             
-                             <div className="absolute bottom-6 left-6">
-                                <h4 className="text-2xl font-serif text-white group-hover:text-brand-gold transition-colors">{project.name}</h4>
-                                <span className="text-xs text-gray-300 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 block mt-2">Saiba Mais</span>
-                             </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { name: "Residencial Serra das Almas", status: "Breve Lançamento", img: "https://images.unsplash.com/photo-1519681393784-d8e5b5a4570e?auto=format&fit=crop&q=80&w=800" },
+              { name: "Jardins da Mangueira", status: "Em Planejamento", img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800" },
+              { name: "Portal do Sol", status: "Estudos Finais", img: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&q=80&w=800" },
+            ].map((project, idx) => (
+              <div key={idx} className="group cursor-pointer relative overflow-hidden rounded-sm reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
+                <div className="absolute top-4 left-4 z-20 bg-brand-gold text-brand-green text-[10px] font-bold uppercase px-3 py-1 rounded-sm">
+                  {project.status}
+                </div>
+                <div className="h-80 overflow-hidden relative">
+                  <img src={project.img} alt={project.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+
+                  <div className="absolute bottom-6 left-6">
+                    <h4 className="text-2xl font-serif text-white group-hover:text-brand-gold transition-colors">{project.name}</h4>
+                    <span className="text-xs text-gray-300 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 block mt-2">Saiba Mais</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
