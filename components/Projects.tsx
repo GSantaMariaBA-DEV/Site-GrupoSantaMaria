@@ -192,7 +192,7 @@ export const Projects: React.FC = () => {
 
             <div className="flex flex-col gap-4">
               <Button className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform">
-                Quero Tabela de Preços
+                Quero Falar com o corretor
               </Button>
               <Button variant="outline" className="w-full py-4 text-sm">
                 Baixar Mapa do Loteamento
