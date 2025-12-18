@@ -10,13 +10,13 @@ export const Hero: React.FC = () => {
         className="absolute inset-0 z-0"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-scale-slow"
+          className="absolute inset-0 bg-cover bg-[65%_center] md:bg-center bg-no-repeat animate-scale-slow"
           style={{
             backgroundImage: `url('/Public/Hero.webp')`
           }}
         />
         {/* Sophisticated Gradient: Darker at bottom for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/90"></div>
       </div>
 
       <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 lg:px-12 text-center flex flex-col items-center justify-center h-full pt-20">
@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
             <span className="italic font-light text-brand-gold">Obra de Arte</span>
           </h1>
 
-          <p className="text-gray-100 text-lg md:text-xl font-sans font-light max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-md">
+          <p className="text-gray-100 text-lg md:text-xl font-sans font-light max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-lg">
             Um refúgio exclusivo onde o design contemporâneo encontra a força das águas e a serenidade da Chapada.
           </p>
 
