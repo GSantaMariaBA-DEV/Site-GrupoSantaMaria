@@ -144,6 +144,14 @@ export const Region: React.FC = () => {
             const [nextImgIndex, setNextImgIndex] = useState(4);
             const [slotToUpdate, setSlotToUpdate] = useState(0);
 
+            // Preload all images to ensure smooth transitions
+            React.useEffect(() => {
+              galleryImages.forEach((image) => {
+                const img = new Image();
+                img.src = image.url;
+              });
+            }, []);
+
             React.useEffect(() => {
               const timer = setInterval(() => {
                 setVisibleIndices((currentIndices) => {
