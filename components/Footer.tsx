@@ -7,10 +7,20 @@ export const Footer: React.FC = () => {
             <div className="w-full max-w-[1920px] mx-auto px-6 lg:px-12">
                 <div className="flex flex-col justify-center items-center gap-8">
                     <div className="flex space-x-6">
-                        <a href="#" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-all transform hover:-translate-y-1">
+                        <a
+                            href="https://www.instagram.com/gruposantamariaba?igsh=YzMzbnJ2bTd5dGty"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-all transform hover:-translate-y-1"
+                        >
                             <Instagram size={24} />
                         </a>
-                        <a href="#" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-all transform hover:-translate-y-1">
+                        <a
+                            href="https://www.facebook.com/share/1AgTgXstbo/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-all transform hover:-translate-y-1"
+                        >
                             <Facebook size={24} />
                         </a>
                     </div>
