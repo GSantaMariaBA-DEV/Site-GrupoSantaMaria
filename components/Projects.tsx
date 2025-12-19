@@ -192,7 +192,10 @@ export const Projects: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <Button className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform">
+              <Button
+                onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform"
+              >
                 Quero Falar com o corretor
               </Button>
               <Button variant="outline" className="w-full py-4 text-sm">
