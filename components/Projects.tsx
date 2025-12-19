@@ -255,7 +255,7 @@ export const Projects: React.FC = () => {
          ========================================= */}
       <div className="bg-gray-900 py-24 border-t border-gray-800 text-white">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <div className="mb-12 reveal">
+          <div className="mb-12 reveal text-center md:text-left">
             <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
             <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
           </div>
