@@ -6,21 +6,55 @@ export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    subject: 'vendas',
+    email: '',
     message: ''
   });
 
+  const formatPhone = (value: string) => {
+    const numbers = value.replace(/\D/g, '');
+    if (numbers.length <= 11) {
+      let masked = numbers;
+      if (numbers.length > 2) {
+        masked = `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+      }
+      if (numbers.length > 7) {
+        masked = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+      }
+      return masked;
+    }
+    return value.slice(0, 15);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    const finalValue = name === 'phone' ? formatPhone(value) : value;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: finalValue
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    alert('Obrigado pelo interesse! Entraremos em contato em breve.');
+    // Simple validation for phone length (should be 15 chars: (XX) XXXXX-XXXX)
+    if (formData.phone.length < 15) {
+      alert('Por favor, insira um telefone válido com DDD e 9 dígitos.');
+      return;
+    }
+
+    // Create the WhatsApp message
+    const message = `Olá! Tenho interesse no Grupo Santa Maria.
+
+*Nome:* ${formData.name}
+*Telefone:* ${formData.phone}
+*E-mail:* ${formData.email}
+*Mensagem:* ${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/5577999999999?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -57,6 +91,7 @@ export const Contact: React.FC = () => {
                   required
                   className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm"
                   placeholder="Seu nome"
+                  value={formData.name}
                   onChange={handleChange}
                 />
               </div>
@@ -71,21 +106,23 @@ export const Contact: React.FC = () => {
                     required
                     className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm"
                     placeholder="(77) 99999-9999"
+                    value={formData.phone}
                     onChange={handleChange}
+                    maxLength={15}
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider text-brand-gold mb-2">Assunto</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm [&>option]:text-gray-800"
+                  <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-brand-gold mb-2">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm"
+                    placeholder="seu@email.com"
+                    value={formData.email}
                     onChange={handleChange}
-                  >
-                    <option value="vendas">Quero Comprar</option>
-                    <option value="informacoes">Mais Informações</option>
-                    <option value="parceria">Parceria</option>
-                  </select>
+                  />
                 </div>
               </div>
 
@@ -97,6 +134,7 @@ export const Contact: React.FC = () => {
                   rows={5}
                   className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm"
                   placeholder="Como podemos ajudar?"
+                  value={formData.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
@@ -106,6 +144,7 @@ export const Contact: React.FC = () => {
               </Button>
             </form>
           </div>
+
 
           {/* Contact Info */}
           <div className="flex flex-col justify-center h-full lg:pl-12">
@@ -143,7 +182,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-xl mb-1">E-mail</h4>
-                    <p className="text-gray-300 text-lg font-light">contato@gruposantamaria.com.br</p>
+                    <p className="text-gray-300 text-lg font-light">gruposantamariaba@gmail.com</p>
                   </div>
                 </div>
               </div>

@@ -198,9 +198,7 @@ export const Projects: React.FC = () => {
               >
                 Quero Falar com o corretor
               </Button>
-              <Button variant="outline" className="w-full py-4 text-sm">
-                Baixar Mapa do Loteamento
-              </Button>
+
             </div>
           </div>
         </div>
