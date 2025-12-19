@@ -6,10 +6,11 @@ export const Projects: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&q=80&w=1600", // Modern House/Street
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600", // Modern Architecture Detail
-    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600", // Nature/Land
-    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600"  // Lifestyle/Exterior
+    "https://files.gruposantamariaba.com.br/Projeto/Portal_06.webp",
+    "https://files.gruposantamariaba.com.br/Projeto/Projeto_01.webp",
+    "https://files.gruposantamariaba.com.br/Projeto/Projeto_02_Quadras.webp",
+    "https://files.gruposantamariaba.com.br/Projeto/Projeto_04_Casas.webp",
+    "https://files.gruposantamariaba.com.br/Projeto/Projeto_05_Interior.webp"
   ];
 
   useEffect(() => {
@@ -236,7 +237,7 @@ export const Projects: React.FC = () => {
             { icon: Droplets, title: "Água", desc: "Abastecimento Embasa garantido" },
             { icon: Flower2, title: "Jardinagem", desc: "Canteiros centrais arborizados" },
             { icon: Footprints, title: "Lazer", desc: "Pista de caminhada integrada" },
-            { icon: Camera, title: "Vista", desc: "Panorâmica para a Serra das Almas" },
+            { icon: Camera, title: "Vista", desc: "Panorâmica para a Serra das Almas e para a Cachoeira Véu da Noiva" },
           ].map((item, idx) => (
             <div key={idx} className="text-center group cursor-default reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-sand mb-6 group-hover:bg-brand-green transition-colors duration-500">
@@ -254,21 +255,17 @@ export const Projects: React.FC = () => {
          ========================================= */}
       <div className="bg-gray-900 py-24 border-t border-gray-800 text-white">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-            <div>
-              <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
-              <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
-            </div>
-            <a href="#contato" className="text-brand-gold hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest mt-6 md:mt-0">
-              Entrar na Lista de Espera <ArrowUpRight size={16} />
-            </a>
+          <div className="mb-12 reveal">
+            <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
+            <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Residencial Serra das Almas", status: "Breve Lançamento", img: "https://images.unsplash.com/photo-1519681393784-d8e5b5a4570e?auto=format&fit=crop&q=80&w=800" },
-              { name: "Jardins da Mangueira", status: "Em Planejamento", img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800" },
-              { name: "Portal do Sol", status: "Estudos Finais", img: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&q=80&w=800" },
+              { name: "Vila Santa Maria II", status: "Breve Lançamento", img: "https://files.gruposantamariaba.com.br/empreendimentos/01.webp" },
+              { name: "Vila Santa Maria III", status: "Em Planejamento", img: "https://files.gruposantamariaba.com.br/empreendimentos/02.webp" },
+              { name: "Vila Santa Maria IV", status: "Em Planejamento", img: "https://files.gruposantamariaba.com.br/empreendimentos/03.webp" },
+              { name: "Vila Santa Maria V", status: "Em Planejamento", img: "https://files.gruposantamariaba.com.br/empreendimentos/04.webp" },
             ].map((project, idx) => (
               <div key={idx} className="group cursor-pointer relative overflow-hidden rounded-sm reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
                 <div className="absolute top-4 left-4 z-20 bg-brand-gold text-brand-green text-[10px] font-bold uppercase px-3 py-1 rounded-sm">

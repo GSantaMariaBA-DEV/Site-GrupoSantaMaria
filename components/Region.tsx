@@ -19,6 +19,66 @@ export const Region: React.FC = () => {
     ]
   };
 
+  const galleryImages = [
+    { url: "https://files.gruposantamariaba.com.br/Regiao/01_livramento_H.webp", title: "Livramento" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/02_Pico_das_Almas_H.webp", title: "Pico das Almas" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/03_VeuDeNoiv_H.webp", title: "Cachoeira Véu da Noiva" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/04_Livramento_H.webp", title: "Livramento" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/05_Pico_do_Itobira_H.webp", title: "Pico do Itobira" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/06_Morro_da_Torre_H.webp", title: "Morro da Torre" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/07_Vista_Cachoeira_Veu_de_Noiva_H.webp", title: "Vista Acima da Cachoeira Véu da Noiva" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/08_Fazenda_Vaccaro_H.webp", title: "Fazenda Vaccaro" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/09_Caminho_do_Fraga_H.webp", title: "Caminho do Fraga" },
+    { url: "https://files.gruposantamariaba.com.br/Regiao/10_Vale_do_Pati_H.webp", title: "Vale do Pati" },
+  ];
+
+  const slideshowLayouts = [
+    {
+      className: "md:row-span-2 relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
+      isWide: false
+    },
+    {
+      className: "relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
+      isWide: false
+    },
+    {
+      className: "relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
+      isWide: false
+    },
+    {
+      className: "md:col-span-2 relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
+      isWide: true
+    }
+  ];
+
+  // Initialize with the first 4 images
+  const [visibleIndices, setVisibleIndices] = useState([0, 1, 2, 3]);
+  const [nextImgIndex, setNextImgIndex] = useState(4);
+  const [slotToUpdate, setSlotToUpdate] = useState(0);
+
+  // Preload all images to ensure smooth transitions
+  React.useEffect(() => {
+    galleryImages.forEach((image) => {
+      const img = new Image();
+      img.src = image.url;
+    });
+  }, []); // Run ONCE on mount
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setVisibleIndices((currentIndices) => {
+        const newIndices = [...currentIndices];
+        newIndices[slotToUpdate] = nextImgIndex;
+        return newIndices;
+      });
+
+      setNextImgIndex((prev) => (prev + 1) % galleryImages.length);
+      setSlotToUpdate((prev) => (prev + 1) % 4); // There are 4 slots
+    }, 3000); // Update one image every 3 seconds
+
+    return () => clearInterval(timer);
+  }, [nextImgIndex, slotToUpdate]); // Clean dependency array
+
   return (
     <section id="regiao" className="py-24 bg-brand-sand relative">
       <div className="w-full max-w-[1920px] mx-auto px-6 lg:px-12">
