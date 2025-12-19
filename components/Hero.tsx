@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               className="min-w-[200px] py-4 text-sm tracking-widest uppercase border-white/40 text-white hover:bg-white hover:text-brand-green backdrop-blur-sm shadow-2xl"
             >
-              Agendar Visita
+              Fale Conosco
             </Button>
           </div>
         </div>
