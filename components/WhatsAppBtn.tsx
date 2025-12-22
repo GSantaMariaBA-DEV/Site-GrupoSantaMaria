@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 export const WhatsAppBtn: React.FC = () => {
   return (
     <a 
-      href="https://wa.me/5577999999999" // Replace with actual number
+      href="https://wa.me/557731990321?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20loteamento." // Replace with actual number
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group"

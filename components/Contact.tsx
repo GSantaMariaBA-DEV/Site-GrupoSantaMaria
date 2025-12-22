@@ -52,7 +52,7 @@ export const Contact: React.FC = () => {
 *Mensagem:* ${formData.message}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/5577999999999?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/557731990321?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank');
   };
@@ -106,7 +106,7 @@ export const Contact: React.FC = () => {
                     name="phone"
                     required
                     className="w-full bg-white/10 border border-white/20 rounded-sm px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:bg-white/20 transition-colors backdrop-blur-sm"
-                    placeholder="(77) 99999-9999"
+                    placeholder="(77) 3199-0321"
                     value={formData.phone}
                     onChange={handleChange}
                     maxLength={15}
@@ -172,7 +172,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-xl mb-1">Central de Vendas</h4>
-                    <p className="text-gray-300 text-lg font-light">(77) 99999-0000</p>
+                    <p className="text-gray-300 text-lg font-light">(77) 3199-0321</p>
                     <p className="text-sm text-brand-gold uppercase tracking-widest mt-1">Seg a Sex: 08h às 18h</p>
                   </div>
                 </div>
