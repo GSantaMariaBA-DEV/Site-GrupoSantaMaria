@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from './ui/Button';
+import { MapPin, Phone, Mail, CheckCircle2 } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -58,19 +58,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="relative text-white overflow-hidden">
-
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1445510861639-5652673c7000?auto=format&fit=crop&q=80&w=2000"
-          alt="Dark Nature Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-brand-green/90 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-
+    <section id="contato" className="relative text-white overflow-hidden bg-[#103425]">
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 

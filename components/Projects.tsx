@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/Button';
 import { ArrowUpRight, CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Cctv, Route, Lightbulb, Home } from 'lucide-react';
+import patiBg from '../assets/pati.jpg';
 
 export const Projects: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -211,7 +212,7 @@ export const Projects: React.FC = () => {
           PART 3: PARALLAX BREAK (The Emotion)
          ========================================= */}
       <div className="relative h-[60vh] bg-fixed bg-center bg-cover flex items-center justify-center reveal"
-        style={{ backgroundImage: `url('/chapadadiamantina-221-c.jpg')` }}>
+        style={{ backgroundImage: `url(${patiBg})` }}>
         <div className="absolute inset-0 bg-brand-green/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-black/30"></div>
 

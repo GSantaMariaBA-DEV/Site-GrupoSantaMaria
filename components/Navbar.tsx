@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import logo from '../assets/logo-navbar.png';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ export const Navbar: React.FC = () => {
           {/* Logo Section */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="/logo-navbar.png"
+              src={logo}
               alt="Grupo Santa Maria Logo"
               className="h-14 w-auto object-contain"
               onError={(e) => e.currentTarget.style.display = 'none'}

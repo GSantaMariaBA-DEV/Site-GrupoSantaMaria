@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './ui/Button';
 import { ChevronDown, Star } from 'lucide-react';
+import heroBg from '../assets/Hero.webp';
 
 export const Hero: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ export const Hero: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-[center_top_10%] md:bg-center bg-no-repeat animate-scale-slow"
           style={{
-            backgroundImage: `url('/Hero.webp')`
+            backgroundImage: `url(${heroBg})`
           }}
         />
         {/* Sophisticated Gradient: Darker at bottom for text readability */}
