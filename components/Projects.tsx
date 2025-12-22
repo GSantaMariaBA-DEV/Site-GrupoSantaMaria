@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/Button';
-import { Camera, MapPin, ArrowUpRight, TreePine, Droplets, Zap, ShieldCheck, Footprints, Flower2, Hammer, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Cctv, Route, Lightbulb, Home } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -169,24 +169,27 @@ export const Projects: React.FC = () => {
               </div>
               <h3 className="text-4xl font-serif font-medium text-brand-text mb-6">
                 Seu Patrimônio <br />
-                <span className="text-brand-green">Sólido e Real</span>
+                <span className="text-brand-green">Em Sua Melhor Versão</span>
               </h3>
               <p className="text-gray-600 font-light leading-relaxed mb-6">
-                O Vila Santa Maria não é uma promessa, é uma realidade. Com localização privilegiada no Bairro Santa Cruz,
-                oferecemos lotes a partir de <strong>250m²</strong> com topografia plana, ideais para projetos modernos.
+                Localizado na parte mais alta do <strong>Bairro Santa Cruz</strong>, o projeto reúne tudo o que define um loteamento realmente superior: conforto, segurança, charme e um enorme potencial de valorização.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="text-brand-gold h-5 w-5" />
-                  <span>Escritura Imediata</span>
+                  <span>Urbanismo Qualificado</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="text-brand-gold h-5 w-5" />
-                  <span>Financiamento Próprio em até 120x</span>
+                  <span>Infraestrutura Entregue</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="text-brand-gold h-5 w-5" />
-                  <span>Sem consulta a SPC/Serasa</span>
+                  <span>Ambiente Premium</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="text-brand-gold h-5 w-5" />
+                  <span>Valorização Acelerada</span>
                 </li>
               </ul>
             </div>
@@ -196,7 +199,7 @@ export const Projects: React.FC = () => {
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full py-5 text-lg shadow-xl hover:-translate-y-1 transform transition-transform"
               >
-                Quero Falar com o corretor
+                Garantir Minha Unidade
               </Button>
 
             </div>
@@ -214,9 +217,10 @@ export const Projects: React.FC = () => {
 
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h3 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
-            "A única coisa que eles não estão fazendo mais é terra."
+            “O que é único não espera.
+            Garanta seu lugar agora.”
+
           </h3>
-          <p className="text-brand-gold text-xl font-serif italic">- Mark Twain</p>
         </div>
       </div>
 
@@ -231,14 +235,14 @@ export const Projects: React.FC = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
           {[
-            { icon: ShieldCheck, title: "Segurança", desc: "Bairro planejado com monitoramento" },
-            { icon: TreePine, title: "Paisagismo", desc: "Áreas verdes preservadas" },
-            { icon: MapPin, title: "Ruas Largas", desc: "100% Pavimentadas com meio-fio" },
-            { icon: Zap, title: "Energia", desc: "Rede elétrica completa e iluminação LED" },
-            { icon: Droplets, title: "Água", desc: "Abastecimento Embasa garantido" },
-            { icon: Flower2, title: "Jardinagem", desc: "Canteiros centrais arborizados" },
-            { icon: Footprints, title: "Lazer", desc: "Pista de caminhada integrada" },
-            { icon: Camera, title: "Vista", desc: "Panorâmica para a Serra das Almas e para a Cachoeira Véu da Noiva" },
+            { icon: Cctv, title: "Sistema de Câmeras Inteligente", desc: "Proteção Contínua e Planejada" },
+            { icon: TreePine, title: "Paisagismo Assinado", desc: "Palmeiras, Áreas Verdes e Estética Padronizada" },
+            { icon: Route, title: "Ruas Calçadas Premium", desc: "Pavimentação Impecável e Durável" },
+            { icon: Zap, title: "Energia Coelba Confiável", desc: "Estabilidade e Segurança no Fornecimento" },
+            { icon: Droplets, title: "Água Embasa Estruturada", desc: "Abastecimento Regular e Eficiente" },
+            { icon: Lightbulb, title: "Iluminação Elegante", desc: "Luzes Modernas que Valorizam o Ambiente" },
+            { icon: Footprints, title: "Lazer Natural", desc: "Acesso a Trilhas e Cachoeiras com Facilidade" },
+            { icon: Home, title: "Ambiente de Vila Contemporânea", desc: "Exclusivo, Charmoso e com Identidade Própria" },
           ].map((item, idx) => (
             <div key={idx} className="text-center group cursor-default reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-sand mb-6 group-hover:bg-brand-green transition-colors duration-500">
@@ -257,8 +261,9 @@ export const Projects: React.FC = () => {
       <div className="bg-gray-900 py-24 border-t border-gray-800 text-white">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <div className="mb-12 reveal text-center md:text-left">
-            <h3 className="text-3xl font-serif text-white">Novos Horizontes</h3>
-            <p className="text-gray-400 mt-2 font-light">O Grupo Santa Maria não para. Confira o que vem por aí.</p>
+            <h3 className="text-3xl font-serif text-white">Novos Movimentos</h3>
+            <p className="text-gray-400 mt-2 font-light">O Villa Santa Maria eleva o padrão do bairro, introduzindo um novo nível de organização, beleza e sofisticação.</p>
+            <p className="text-gray-400 mt-2 font-light">Um marco que valoriza tudo ao redor, confira o que vem por ai!</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

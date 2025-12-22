@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Shield, Gem } from 'lucide-react';
+import { Leaf, Gem, Wind, Waves } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
@@ -21,24 +21,36 @@ export const About: React.FC = () => {
                 Filosofia Grupo Santa Maria
               </span>
               <h2 className="text-4xl md:text-6xl font-serif leading-tight text-white mb-6">
-                Urbanismo de <br className="hidden md:block" />
-                <span className="text-brand-gold italic">Alma & Propósito</span>
+                Urbanismo Com <br className="hidden md:block" />
+                <span className="text-brand-gold italic">Essência, Alma & Precisão</span>
               </h2>
             </div>
 
             <div className="space-y-6 text-gray-300 font-sans font-light text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               <p>
-                Acreditamos que um loteamento não é apenas demarcação de terra, mas a criação de cenários para a vida acontecer.
-                Nossa assinatura une a <strong>segurança jurídica absoluta</strong> com um respeito profundo pela topografia e flora local.
-              </p>
-              <p>
-                No Bairro Santa Cruz, não construímos apenas ruas; desenhamos caminhos para um futuro próspero, onde cada metro quadrado
-                é pensado para valorizar seu patrimônio e elevar sua experiência de morar.
+                O <span>Villa Santa Maria</span> nasce com propósito: Criar um ambiente de alto padrão onde estética, natureza e organização convivem em absoluta harmonia.
               </p>
             </div>
 
-            <div className="pt-10 border-t border-white/10 w-full max-w-2xl mx-auto">
-              <p className="font-serif text-2xl md:text-3xl text-white italic">"Sofisticação é viver cercado pelo que é natural."</p>
+            <div className="pt-10 border-t border-white/10 w-full max-w-7xl mx-auto">
+              <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center items-center gap-6 lg:gap-12">
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                  <Leaf className="text-brand-gold w-5 h-5 shrink-0" />
+                  <span className="text-white font-sans font-light text-lg">Ruas arborizadas.</span>
+                </div>
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                  <Leaf className="text-brand-gold w-5 h-5 shrink-0" />
+                  <span className="text-white font-sans font-light text-lg">Canteiros paisagísticos planejados.</span>
+                </div>
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                  <Leaf className="text-brand-gold w-5 h-5 shrink-0" />
+                  <span className="text-white font-sans font-light text-lg">Ventilação natural constante.</span>
+                </div>
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                  <Leaf className="text-brand-gold w-5 h-5 shrink-0" />
+                  <span className="text-white font-sans font-light text-lg">Atmosfera leve e elegante.</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -48,27 +60,27 @@ export const About: React.FC = () => {
               {/* Card 1 */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:bg-brand-gold/10 transition-all duration-500 group flex flex-col items-center text-center">
                 <Gem className="text-brand-gold mb-6 h-12 w-12 group-hover:scale-110 transition-transform" />
-                <h3 className="font-serif text-xl mb-3 text-white">Alto Padrão</h3>
+                <h3 className="font-serif text-xl mb-3 text-white">Área Super Nobre</h3>
                 <p className="text-gray-400 text-sm font-light leading-relaxed">
-                  Infraestrutura completa, paisagismo assinado e acabamentos de primeira linha.
+                  Reconhecida como uma das mais valiosas da cidade.
                 </p>
               </div>
 
               {/* Card 2 */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:bg-brand-gold/10 transition-all duration-500 group flex flex-col items-center text-center">
-                <Shield className="text-brand-gold mb-6 h-12 w-12 group-hover:scale-110 transition-transform" />
-                <h3 className="font-serif text-xl mb-3 text-white">100% Legalizado</h3>
+                <Wind className="text-brand-gold mb-6 h-12 w-12 group-hover:scale-110 transition-transform" />
+                <h3 className="font-serif text-xl mb-3 text-white">Ventilação Perfeita</h3>
                 <p className="text-gray-400 text-sm font-light leading-relaxed">
-                  Escritura pública e matrículas individualizadas. Segurança para investir e construir.
+                  Local alto, fresco e silencioso.
                 </p>
               </div>
 
               {/* Card 3 */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:bg-brand-gold/10 transition-all duration-500 group flex flex-col items-center text-center">
-                <Leaf className="text-brand-gold mb-6 h-12 w-12 group-hover:scale-110 transition-transform" />
-                <h3 className="font-serif text-xl mb-3 text-white">Eco-Integração</h3>
+                <Waves className="text-brand-gold mb-6 h-12 w-12 group-hover:scale-110 transition-transform" />
+                <h3 className="font-serif text-xl mb-3 text-white">Vista Exclusiva Para A Cachoeira</h3>
                 <p className="text-gray-400 text-sm font-light leading-relaxed">
-                  Projetos que abraçam a vegetação nativa, criando microclimas agradáveis e exclusivos.
+                  Um privilégio reservado a poucos.
                 </p>
               </div>
             </div>

@@ -90,8 +90,8 @@ export const Region: React.FC = () => {
             O Portal da Chapada
           </h2>
           <p className="text-gray-600 text-lg font-light leading-relaxed">
-            O Vila Santa Maria está posicionado no vetor de crescimento mais nobre da cidade.
-            A poucos minutos da conveniência urbana, mas com o clima ameno e a vista eterna para as montanhas de <strong>Rio de Contas</strong>.
+            Viver no Villa Santa Maria é viver em uma localização irreplicável.
+            Cercada por paisagens exuberantes e por uma cidade em plena ascensão econômica.
           </p>
         </div>
 
