@@ -119,7 +119,7 @@ export const Projects: React.FC = () => {
           </div>
 
           {/* Mobile Status Card (Positioned Below Images) */}
-          <div className="md:hidden px-6 mt-6 relative z-20 reveal">
+          <div className="xl:hidden px-6 mt-6 relative z-20 reveal">
             <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm shadow-2xl border-l-4 border-brand-gold w-full max-w-md mx-auto">
               <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
               <div className="flex items-center gap-2 mb-4">
