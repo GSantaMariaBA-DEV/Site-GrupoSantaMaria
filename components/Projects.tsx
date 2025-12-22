@@ -45,10 +45,10 @@ export const Projects: React.FC = () => {
           PART 2: THE SHOWCASE (Dynamic Layout)
          ========================================= */}
       <div className="w-full max-w-[1920px] mx-auto mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[70vh] items-center">
+        <div className="grid grid-cols-1 xl:grid-cols-12 min-h-[70vh] items-center">
 
           {/* Left: Dynamic Image Carousel (Larger) */}
-          <div className="lg:col-span-8 relative h-[50vh] lg:h-[80vh] overflow-hidden group rounded-r-3xl shadow-2xl reveal">
+          <div className="xl:col-span-8 relative h-[50vh] xl:h-[80vh] overflow-hidden group rounded-r-3xl shadow-2xl reveal">
             {carouselImages.map((src, index) => (
               <div
                 key={index}
@@ -162,7 +162,7 @@ export const Projects: React.FC = () => {
           </div>
 
           {/* Right: Pitch & CTA */}
-          <div className="lg:col-span-4 p-10 lg:pl-16 flex flex-col justify-center reveal">
+          <div className="xl:col-span-4 p-10 xl:pl-16 flex flex-col justify-center reveal">
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <Hammer className="text-brand-gold" size={20} />
