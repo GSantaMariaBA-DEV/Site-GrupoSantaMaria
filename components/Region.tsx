@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mountain, Car, School, HeartPulse, ShoppingBag, Palmtree, Navigation } from 'lucide-react';
+import { MapPin, Mountain, Car, School, HeartPulse, ShoppingBag, Palmtree, Navigation, Sprout, TrendingUp, Wind } from 'lucide-react';
 
 export const Region: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'nature' | 'urban'>('nature');
@@ -96,6 +96,66 @@ export const Region: React.FC = () => {
         </div>
 
         {/* =========================================
+            CITY HIGHLIGHTS SECTION
+           ========================================= */}
+        <div className="mb-24 reveal">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-serif text-brand-green">
+              Livramento de Nossa Senhora
+            </h3>
+            <div className="w-24 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Highlight 1 */}
+            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/20 group">
+              <div className="w-14 h-14 bg-brand-green/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-green/10 transition-colors duration-300">
+                <Sprout className="text-brand-green" size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-brand-green mb-3">
+                Maior produtor de maracujá do Brasil
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-600 font-light text-sm">
+                  <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
+                  <span>A Bahia lidera o país com <strong className="font-semibold text-brand-green">253.900 toneladas</strong></span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 font-light text-sm">
+                  <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
+                  <span><strong className="font-semibold text-brand-green">44.395 toneladas</strong> produzidas apenas nesta região</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Highlight 2 */}
+            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/20 group">
+              <div className="w-14 h-14 bg-brand-green/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-green/10 transition-colors duration-300">
+                <TrendingUp className="text-brand-green" size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-brand-green mb-3">
+                Polo Econômico
+              </h4>
+              <p className="text-gray-600 font-light text-sm leading-relaxed">
+                Polo consolidado na produção de frutas de alto valor econômico.
+              </p>
+            </div>
+
+            {/* Highlight 3 */}
+            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/20 group">
+              <div className="w-14 h-14 bg-brand-green/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-green/10 transition-colors duration-300">
+                <Wind className="text-brand-green" size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-brand-green mb-3">
+                Qualidade de Vida
+              </h4>
+              <p className="text-gray-600 font-light text-sm leading-relaxed">
+                Cidade de ar puro, clima superior e expansão planejada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* =========================================
             INTERACTIVE MAP SECTION
            ========================================= */}
         <div className="bg-white rounded-sm shadow-2xl overflow-hidden mb-24 reveal">
@@ -178,6 +238,17 @@ export const Region: React.FC = () => {
             </div>
 
           </div>
+        </div>
+
+        {/* Exclusivity Text Block */}
+        <div className="text-center mb-24 reveal">
+          <p className="text-xl md:text-2xl font-serif text-brand-green leading-relaxed">
+            Nada disso existe em outro lugar.<br />
+            E nada disso pode ser replicado.
+          </p>
+          <p className="text-lg md:text-xl font-light text-brand-gold mt-4 italic">
+            É exclusividade em sua forma mais pura.
+          </p>
         </div>
 
         {/* =========================================

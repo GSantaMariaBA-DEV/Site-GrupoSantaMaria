@@ -78,7 +78,8 @@ export const Contact: React.FC = () => {
           <div className="text-center lg:text-left">
             <h2 className="text-4xl font-serif font-bold mb-4">Fale Conosco</h2>
             <p className="text-gray-300 mb-10 font-light text-lg">
-              Preencha o formulário abaixo para receber informações exclusivas sobre o Vila Santa Maria ou futuros lançamentos.
+              A exclusividade começa no atendimento.
+              Receba a tabela atualizada, as últimas unidades disponíveis e condições especiais de lançamento.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6 text-left">

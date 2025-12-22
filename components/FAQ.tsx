@@ -51,7 +51,8 @@ export const FAQ: React.FC = () => {
               </div>
               <h2 className="text-brand-green font-serif font-bold text-4xl mb-4 leading-tight">Dúvidas Frequentes</h2>
               <p className="text-gray-600 text-lg">
-                Transparência absoluta em cada etapa do seu investimento com o Grupo Santa Maria.
+                Esclarecemos tudo sobre documentação, infraestrutura, condições e etapas.
+                Atendimento especializado, direto e transparente.
               </p>
             </div>
 
