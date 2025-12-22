@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Custom theme configuration for Tailwind v4 */
+@theme {
+  /* Brand Colors */
+  --color-brand-green: #04472A;
+  --color-brand-gold: #C5A059;
+  --color-brand-sand: #F5F5F0;
+  --color-brand-text: #333333;
+
+  /* Fonts - using correct Tailwind v4 syntax */
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Manrope', sans-serif;
+
+  /* Animations */
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-fade-in-up: fadeInUp 1s ease-out forwards;
+  --animate-scale-slow: scaleSlow 20s linear infinite alternate;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleSlow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility class for revealing elements on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

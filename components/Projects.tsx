@@ -57,6 +57,8 @@ export const Projects: React.FC = () => {
                 <img
                   src={src}
                   alt={`Vila Santa Maria View ${index + 1}`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
                   className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-linear ${index === currentImage ? 'scale-110' : 'scale-100'}`}
                 />
               </div>
@@ -279,7 +281,7 @@ export const Projects: React.FC = () => {
                   {project.status}
                 </div>
                 <div className="h-80 overflow-hidden relative">
-                  <img src={project.img} alt={project.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
+                  <img src={project.img} alt={project.name} loading="lazy" decoding="async" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
 
                   <div className="absolute bottom-6 left-6">

@@ -15,67 +15,20 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#04472A" />
     
-    <!-- Google Fonts: Cinzel & Manrope -->
+    <!-- Google Fonts: Cinzel & Manrope - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    </noscript>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Preconnect to image CDNs for faster loading -->
+    <link rel="preconnect" href="https://files.gruposantamariaba.com.br">
+    <link rel="preconnect" href="https://i.ibb.co">
     
-    <!-- Tailwind Config to match Brand Identity -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                green: '#04472A',
-                gold: '#C5A059',
-                sand: '#F5F5F0',
-                text: '#333333',
-              }
-            },
-            fontFamily: {
-              serif: ['Cinzel', 'serif'],
-              sans: ['Manrope', 'sans-serif'],
-            },
-            animation: {
-              'spin-slow': 'spin 12s linear infinite',
-              'fade-in-up': 'fadeInUp 1s ease-out forwards',
-              'scale-slow': 'scaleSlow 20s linear infinite alternate',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              scaleSlow: {
-                '0%': { transform: 'scale(1)' },
-                '100%': { transform: 'scale(1.1)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Smooth Scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-      
-      /* Utility class for revealing elements on scroll */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/assets/Hero.webp" type="image/webp">
   <script type="importmap">
 {
   "imports": {

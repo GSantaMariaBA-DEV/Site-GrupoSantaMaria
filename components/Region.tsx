@@ -255,102 +255,37 @@ export const Region: React.FC = () => {
             LIFESTYLE GALLERY (Existing)
            ========================================= */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
-          {/* Gallery Slideshow */}
-          {(() => {
-            const galleryImages = [
-              { url: "https://i.ibb.co/8Lj1Ybp2/01-livramento-H.png", title: "Livramento" },
-              { url: "https://i.ibb.co/Fbdxp6q4/02-Pico-das-Almas-H.png", title: "Pico das Almas" },
-              { url: "https://i.ibb.co/FkhtzfS0/03-Livramento-H.png", title: "Cachoeira Véu da Noiva" },
-              { url: "https://i.ibb.co/LhrCLmP6/04-Livramento-H.png", title: "Livramento" },
-              { url: "https://i.ibb.co/bgt5xFXT/05-Pico-do-Itobira-H.png", title: "Pico do Itobira" },
-              { url: "https://i.ibb.co/zTwZwbHC/06-Morro-da-Torre-H.png", title: "Morro da Torre" },
-              { url: "https://i.ibb.co/VcrmFCzd/07-Vista-Cachoeira-Veu-de-Noiva-H.png", title: "Vista Acima da Cachoeira Véu da Noiva" },
-              { url: "https://i.ibb.co/9HbGV8Qh/08-Fazenda-Vaccaro-H.png", title: "Fazenda Vaccaro" },
-              { url: "https://i.ibb.co/0yMhzPVN/09-Caminho-do-Fraga-H.png", title: "Caminho do Fraga" },
-              { url: "https://i.ibb.co/gL5SF3Gs/10-Vale-do-Pati-H.png", title: "Vale do Pati" },
-            ];
-
-            // Initialize with the first 4 images
-            const [visibleIndices, setVisibleIndices] = useState([0, 1, 2, 3]);
-            const [nextImgIndex, setNextImgIndex] = useState(4);
-            const [slotToUpdate, setSlotToUpdate] = useState(0);
-
-            // Preload all images to ensure smooth transitions
-            React.useEffect(() => {
-              galleryImages.forEach((image) => {
-                const img = new Image();
-                img.src = image.url;
-              });
-            }, []);
-
-            React.useEffect(() => {
-              const timer = setInterval(() => {
-                setVisibleIndices((currentIndices) => {
-                  const newIndices = [...currentIndices];
-                  newIndices[slotToUpdate] = nextImgIndex;
-                  return newIndices;
-                });
-
-                setNextImgIndex((prev) => (prev + 1) % galleryImages.length);
-                setSlotToUpdate((prev) => (prev + 1) % 4); // There are 4 slots
-              }, 3000); // Update one image every 3 seconds
-
-              return () => clearInterval(timer);
-            }, [nextImgIndex, slotToUpdate, galleryImages.length]);
-
-            const layouts = [
-              {
-                className: "md:row-span-2 relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
-                isWide: false
-              },
-              {
-                className: "relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
-                isWide: false
-              },
-              {
-                className: "relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
-                isWide: false
-              },
-              {
-                className: "md:col-span-2 relative group overflow-hidden rounded-sm cursor-zoom-in reveal",
-                isWide: true
-              }
-            ];
+          {/* Gallery Slideshow - Using data defined at component top */}
+          <style>{`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+          `}</style>
+          {slideshowLayouts.map((layout, i) => {
+            const imageIndex = visibleIndices[i];
+            const item = galleryImages[imageIndex];
 
             return (
-              <>
-                <style>{`
-                  @keyframes fadeIn {
-                    from { opacity: 0; }
-                    to { opacity: 1; }
-                  }
-                `}</style>
-                {layouts.map((layout, i) => {
-                  const imageIndex = visibleIndices[i];
-                  const item = galleryImages[imageIndex];
+              <div key={i} className={layout.className}>
+                <img
+                  key={`${item.url}-${imageIndex}`}
+                  src={item.url}
+                  alt={item.title}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ animation: 'fadeIn 2s ease-in-out forwards' }}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                {layout.isWide && <div className="absolute inset-0 bg-brand-green/10 mix-blend-overlay"></div>}
 
-                  return (
-                    <div key={i} className={layout.className}>
-                      <img
-                        key={`${item.url}-${imageIndex}`} // changing key triggers re-mount and animation
-                        src={item.url}
-                        alt={item.title}
-                        style={{ animation: 'fadeIn 2s ease-in-out forwards' }}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                      {/* Overlay Gradient */}
-                      {layout.isWide && <div className="absolute inset-0 bg-brand-green/10 mix-blend-overlay"></div>}
-
-                      <div className={`absolute bottom-0 left-0 p-6 md:p-8 w-full bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
-                        <h3 className={`text-white font-serif ${layout.isWide ? 'text-2xl mt-1' : 'text-xl'}`}>{item.title}</h3>
-                      </div>
-                    </div>
-                  );
-                })}
-              </>
+                <div className={`absolute bottom-0 left-0 p-6 md:p-8 w-full bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
+                  <h3 className={`text-white font-serif ${layout.isWide ? 'text-2xl mt-1' : 'text-xl'}`}>{item.title}</h3>
+                </div>
+              </div>
             );
-          })()}
+          })}
         </div>
 
       </div>
