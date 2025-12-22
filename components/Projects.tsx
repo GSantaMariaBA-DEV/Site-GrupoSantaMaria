@@ -65,7 +65,7 @@ export const Projects: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-brand-green/30 to-transparent z-10"></div>
 
             {/* Floating Status Card */}
-            <div className="hidden md:block absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-2xl border-l-4 border-brand-gold z-20 max-w-xs reveal">
+            <div className="hidden xl:block absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-2xl border-l-4 border-brand-gold z-20 max-w-xs reveal">
               <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
               <div className="flex items-center gap-2 mb-4">
                 <span className="relative flex h-3 w-3">
@@ -118,8 +118,8 @@ export const Projects: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Status Card (Positioned Below Images) */}
-          <div className="xl:hidden px-6 mt-6 relative z-20 reveal">
+          {/* Mobile/Tablet Status Card (Positioned Below Images) */}
+          <div className="xl:hidden lg:col-span-12 px-6 mt-6 relative z-20 reveal">
             <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm shadow-2xl border-l-4 border-brand-gold w-full max-w-md mx-auto">
               <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
               <div className="flex items-center gap-2 mb-4">
