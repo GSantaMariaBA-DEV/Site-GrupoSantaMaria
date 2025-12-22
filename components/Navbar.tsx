@@ -18,9 +18,10 @@ export const Navbar: React.FC = () => {
           {/* Logo Section */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="/Public/logo-navbar.png"
+              src="/logo-navbar.png"
               alt="Grupo Santa Maria Logo"
               className="h-14 w-auto object-contain"
+              onError={(e) => e.currentTarget.style.display = 'none'}
             />
             <div className="hidden sm:flex flex-col">
               <span className="text-brand-green font-serif font-bold text-lg leading-tight tracking-wide">GRUPO</span>

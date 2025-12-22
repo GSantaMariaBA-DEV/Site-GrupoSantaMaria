@@ -7,12 +7,12 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[calc(100vh-5rem)] mt-20 flex items-center justify-center overflow-hidden py-16 md:py-0">
       {/* Background Image with Slow Zoom Effect */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-brand-green"
       >
         <div
           className="absolute inset-0 bg-cover bg-[center_top_10%] md:bg-center bg-no-repeat animate-scale-slow"
           style={{
-            backgroundImage: `url('/Public/Hero.webp')`
+            backgroundImage: `url('/Hero.webp')`
           }}
         />
         {/* Sophisticated Gradient: Darker at bottom for text readability */}
