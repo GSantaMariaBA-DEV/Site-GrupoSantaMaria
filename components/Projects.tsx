@@ -211,7 +211,7 @@ export const Projects: React.FC = () => {
           PART 3: PARALLAX BREAK (The Emotion)
          ========================================= */}
       <div className="relative h-[60vh] bg-fixed bg-center bg-cover flex items-center justify-center reveal"
-        style={{ backgroundImage: `url('/Public/chapadadiamantina-221-c.jpg')` }}>
+        style={{ backgroundImage: `url('/chapadadiamantina-221-c.jpg')` }}>
         <div className="absolute inset-0 bg-brand-green/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-black/30"></div>
 
