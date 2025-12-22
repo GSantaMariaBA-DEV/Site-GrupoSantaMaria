@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/Button';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Star } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 lg:px-12 text-center flex flex-col items-center justify-center h-full pt-20">
 
-        <div className="animate-fade-in-up space-y-8 max-w-4xl">
+        <div className="animate-fade-in-up space-y-6 max-w-4xl">
           <div className="inline-flex items-center gap-4 text-white/90 uppercase tracking-[0.3em] text-xs md:text-sm font-sans font-medium">
             <span className="w-12 h-[1px] bg-brand-gold"></span>
             <span>Livramento de Nossa Senhora</span>
@@ -34,16 +34,34 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p className="text-gray-100 text-lg md:text-xl font-sans font-light max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-lg">
-            Um refúgio exclusivo onde o design contemporâneo encontra a força das águas e a serenidade da Chapada.
+            Um loteamento de alto padrão criado para quem busca mais do que morar: busca <strong>Um Privilégio.</strong>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+          <p className="text-gray-200 text-base md:text-lg font-sans font-light max-w-3xl mx-auto leading-relaxed opacity-90 drop-shadow-lg">
+            Aqui, o ar é mais puro, o silêncio é real e cada detalhe foi planejado para oferecer leveza, exclusividade e a sensação de estar vivendo exatamente onde sempre sonhou.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 py-2 text-brand-gold">
+            {[
+              "Local elevado.",
+              "Área super nobre.",
+              "Vista privilegiada.",
+              "Exclusividade verdadeira."
+            ].map((text, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <Star size={16} fill="currentColor" className="text-brand-gold" />
+                <span className="text-sm md:text-base font-medium tracking-wide">{text}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               variant="secondary"
               onClick={() => document.getElementById('empreendimentos')?.scrollIntoView({ behavior: 'smooth' })}
               className="min-w-[200px] py-4 text-sm tracking-widest uppercase bg-brand-gold/90 hover:bg-brand-gold backdrop-blur-sm border-none shadow-2xl"
             >
-              Descobrir
+              Conhecer Agora
             </Button>
 
             <Button
@@ -51,17 +69,18 @@ export const Hero: React.FC = () => {
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               className="min-w-[200px] py-4 text-sm tracking-widest uppercase border-white/40 text-white hover:bg-white hover:text-brand-green backdrop-blur-sm shadow-2xl"
             >
-              Fale Conosco
+              Fale Com Especialista
             </Button>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-white/70 cursor-pointer"
-          onClick={() => document.getElementById('grupo')?.scrollIntoView({ behavior: 'smooth' })}>
-          <span className="text-[10px] uppercase tracking-widest shadow-black drop-shadow-lg">Explore</span>
-          <ChevronDown size={24} className="text-brand-gold drop-shadow-lg" />
-        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce flex flex-col items-center gap-2 text-white/70 cursor-pointer"
+        onClick={() => document.getElementById('grupo')?.scrollIntoView({ behavior: 'smooth' })}>
+        <span className="text-[10px] uppercase tracking-widest shadow-black drop-shadow-lg">Explore</span>
+        <ChevronDown size={24} className="text-brand-gold drop-shadow-lg" />
       </div>
     </section>
   );
