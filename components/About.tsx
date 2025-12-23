@@ -28,7 +28,7 @@ export const About: React.FC = () => {
 
             <div className="space-y-6 text-gray-300 font-sans font-light text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               <p>
-                O <span>Villa Santa Maria</span> nasce com propósito: Criar um ambiente de alto padrão onde estética, natureza e organização convivem em absoluta harmonia.
+                O <span>Vila Santa Maria</span> nasce com propósito: Criar um ambiente de alto padrão onde estética, natureza e organização convivem em absoluta harmonia.
               </p>
             </div>
 

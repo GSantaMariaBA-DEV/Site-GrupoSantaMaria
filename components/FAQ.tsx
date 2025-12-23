@@ -14,8 +14,8 @@ export const FAQ: React.FC = () => {
       answer: "Oferecemos financiamento direto com a incorporadora, sem burocracia bancária. Trabalhamos com entrada facilitada e parcelamento em até 120 meses. Consulte nossos corretores para uma simulação personalizada."
     },
     {
-      question: "Qual o prazo para liberação para construção?",
-      answer: "No Vila Santa Maria, a liberação é imediata após a assinatura do contrato e pagamento da entrada, pois a infraestrutura básica já está concluída. Para os lançamentos futuros, seguimos o cronograma de obras estipulado em contrato."
+      question: "Qual o prazo de entrega para construção?",
+      answer: "As obras de infraestrutura (água, luz e pavimentação) têm início previsto a partir das primeiras vendas. Nosso compromisso é liberar a Posse para Construção o mais breve possível, permitindo que você inicie sua obra assim que a segurança e os insumos básicos (água/luz) estiverem disponíveis no lote."
     },
     {
       question: "Onde ficam localizados os empreendimentos?",

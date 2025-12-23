@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
         <div className="animate-fade-in-up space-y-4 md:space-y-6 max-w-4xl">
           <div className="inline-flex items-center gap-4 text-white/90 uppercase tracking-[0.3em] text-[10px] md:text-sm font-sans font-medium">
             <span className="w-8 md:w-12 h-[1px] bg-brand-gold"></span>
-            <span>VILLA SANTA MARIA — A OBRA-PRIMA DO SANTA CRUZ</span>
+            <span>VILA SANTA MARIA — A OBRA-PRIMA DO SANTA CRUZ</span>
             <span className="w-8 md:w-12 h-[1px] bg-brand-gold"></span>
           </div>
 

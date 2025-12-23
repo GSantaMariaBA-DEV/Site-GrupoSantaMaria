@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { MapPin, Mountain, Car, School, HeartPulse, ShoppingBag, Palmtree, Navigation, Sprout, TrendingUp, Wind } from 'lucide-react';
+import { MapPin, Mountain, Car, School, HeartPulse, ShoppingBag, Palmtree, Navigation, Sprout, TrendingUp, Wind, ShoppingCart, Dumbbell, Droplets } from 'lucide-react';
 
 export const Region: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'nature' | 'urban'>('nature');
 
   const locations = {
     nature: [
-      { name: "Cachoeira do Fraga", time: "10 min", distance: "4 km", icon: DropletsIcon },
+      { name: "Cachoeira do Fraga", time: "10 min", distance: "4 km", icon: Droplets },
       { name: "Centro Histórico Rio de Contas", time: "25 min", distance: "12 km", icon: Mountain },
       { name: "Pico das Almas (Base)", time: "45 min", distance: "22 km", icon: Mountain },
       { name: "Cachoeira Véu da Noiva", time: "20 min", distance: "9 km", icon: Palmtree },
@@ -14,8 +14,9 @@ export const Region: React.FC = () => {
     urban: [
       { name: "Centro de Livramento", time: "5 min", distance: "2 km", icon: ShoppingBag },
       { name: "Hospital Municipal", time: "7 min", distance: "3 km", icon: HeartPulse },
-      { name: "Colégios e Faculdades", time: "6 min", distance: "2.5 km", icon: School },
-      { name: "Bancos e Comércio", time: "5 min", distance: "2 km", icon: Car },
+      { name: "Instituição de Ensino", time: "6 min", distance: "2.5 km", icon: School },
+      { name: "Mercado", time: "3 min", distance: "500m", icon: ShoppingCart },
+      { name: "Cross-Fit", time: "5 min", distance: "2 km", icon: Dumbbell },
     ]
   };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/Button';
-import { ArrowUpRight, CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Cctv, Route, Lightbulb, Home } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Cctv, Route, Lightbulb, Home, ShieldCheck } from 'lucide-react';
 import patiBg from '../assets/pati.jpg';
 
 export const Projects: React.FC = () => {
@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
         </h2>
         <p className="text-gray-500 mt-4 max-w-2xl mx-auto font-light text-lg reveal">
           O primeiro bairro planejado de alto padrão em Livramento. <br className="hidden md:block" />
-          Infraestrutura pronta para você construir seu sonho.
+          Infraestrutura para você construir seu sonho.
         </p>
       </div>
 
@@ -184,7 +184,7 @@ export const Projects: React.FC = () => {
                 </li>
                 <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="text-brand-gold h-5 w-5" />
-                  <span>Infraestrutura Entregue</span>
+                  <span>Infraestrutura</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="text-brand-gold h-5 w-5" />
@@ -233,12 +233,12 @@ export const Projects: React.FC = () => {
       <div className="py-24 px-6 lg:px-12 max-w-[1920px] mx-auto bg-white relative z-10 -mt-20 rounded-t-3xl shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.1)]">
         <div className="text-center mb-16 reveal">
           <span className="text-brand-green uppercase tracking-[0.2em] text-sm font-bold">Detalhes Técnicos</span>
-          <h3 className="text-3xl font-serif mt-3 text-brand-text">Infraestrutura Entregue</h3>
+          <h3 className="text-3xl font-serif mt-3 text-brand-text">Infraestrutura</h3>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
           {[
-            { icon: Cctv, title: "Sistema de Câmeras Inteligente", desc: "Proteção Contínua e Planejada" },
+            { icon: ShieldCheck, title: "Segurança", desc: "Bairro Residencial Tranquilo e Seguro" },
             { icon: TreePine, title: "Paisagismo Assinado", desc: "Palmeiras, Áreas Verdes e Estética Padronizada" },
             { icon: Route, title: "Ruas Calçadas Premium", desc: "Pavimentação Impecável e Durável" },
             { icon: Zap, title: "Energia Coelba Confiável", desc: "Estabilidade e Segurança no Fornecimento" },
