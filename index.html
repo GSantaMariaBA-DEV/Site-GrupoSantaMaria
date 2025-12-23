@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grupo Santa Maria | Urbanismo e Desenvolvimento</title>
-    
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#04472A" />
-    
-    <!-- Google Fonts: Cinzel & Manrope - Optimized Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-    </noscript>
-    
-    <!-- Preconnect to image CDNs for faster loading -->
-    <link rel="preconnect" href="https://files.gruposantamariaba.com.br">
-    <link rel="preconnect" href="https://i.ibb.co">
-    
-    <!-- Preload critical hero image -->
-    <link rel="preload" as="image" href="/assets/Hero.webp" type="image/webp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Santa Maria | Urbanismo e Desenvolvimento</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#04472A" />
+
+  <!-- Google Fonts: Cinzel & Manrope - Optimized Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;600;800&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <!-- Preconnect to image CDNs for faster loading -->
+  <link rel="preconnect" href="https://files.gruposantamariaba.com.br">
+  <link rel="preconnect" href="https://i.ibb.co">
+
+  <!-- Preload critical hero image with high priority -->
+  <link rel="preload" as="image" href="/assets/Hero.webp" type="image/webp" fetchpriority="high">
   <script type="importmap">
 {
   "imports": {
@@ -40,31 +45,33 @@
 }
 </script>
 </head>
-  <body class="bg-brand-sand text-brand-text font-sans antialiased overflow-x-hidden">
-    <div id="root"></div>
-    <script>
-      // Simple Scroll Observer for "reveal" classes
-      document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-            }
-          });
-        }, { threshold: 0.1 });
 
-        // Function to observe new elements (useful for React dynamic renders)
-        const observeElements = () => {
-          const reveals = document.querySelectorAll('.reveal');
-          reveals.forEach(el => observer.observe(el));
-        };
+<body class="bg-brand-sand text-brand-text font-sans antialiased overflow-x-hidden">
+  <div id="root"></div>
+  <script>
+    // Simple Scroll Observer for "reveal" classes
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
 
-        observeElements();
-        
-        // Re-run occasionally for React re-renders
-        setInterval(observeElements, 1000);
-      });
-    </script>
+      // Function to observe new elements (useful for React dynamic renders)
+      const observeElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => observer.observe(el));
+      };
+
+      observeElements();
+
+      // Re-run occasionally for React re-renders
+      setInterval(observeElements, 1000);
+    });
+  </script>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

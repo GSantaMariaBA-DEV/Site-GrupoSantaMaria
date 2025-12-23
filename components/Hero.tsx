@@ -10,11 +10,11 @@ export const Hero: React.FC = () => {
       <div
         className="absolute inset-0 z-0 bg-brand-green"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-[center_top_10%] md:bg-center bg-no-repeat animate-scale-slow"
-          style={{
-            backgroundImage: `url(${heroBg})`
-          }}
+        <img
+          src={heroBg}
+          alt="Villa Santa Maria"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top_10%] md:object-center animate-scale-slow"
         />
         {/* Sophisticated Gradient: Darker at bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/90"></div>
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Scroll Indicator - Repositioned for better flow and visibility */}
-          <div 
+          <div
             className="flex flex-col items-center gap-2 text-white/70 cursor-pointer mt-8 md:mt-12 animate-bounce hover:text-white transition-colors duration-300 z-20 pb-4 md:pb-0"
             onClick={() => document.getElementById('grupo')?.scrollIntoView({ behavior: 'smooth' })}
           >
