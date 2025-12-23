@@ -265,7 +265,7 @@ export const Projects: React.FC = () => {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <div className="mb-12 reveal text-center md:text-left">
             <h3 className="text-3xl font-serif text-white">Novos Movimentos</h3>
-            <p className="text-gray-400 mt-2 font-light">O Villa Santa Maria eleva o padrão do bairro, introduzindo um novo nível de organização, beleza e sofisticação.</p>
+            <p className="text-gray-400 mt-2 font-light">O Vila Santa Maria eleva o padrão do bairro, introduzindo um novo nível de organização, beleza e sofisticação.</p>
             <p className="text-gray-400 mt-2 font-light">Um marco que valoriza tudo ao redor, confira o que vem por ai!</p>
           </div>
 

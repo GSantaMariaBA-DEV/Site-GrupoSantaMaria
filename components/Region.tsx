@@ -91,7 +91,7 @@ export const Region: React.FC = () => {
             O Portal da Chapada
           </h2>
           <p className="text-gray-600 text-lg font-light leading-relaxed">
-            Viver no Villa Santa Maria é viver em uma localização irreplicável.
+            Viver no Vila Santa Maria é viver em uma localização irreplicável.
             Cercada por paisagens exuberantes e por uma cidade em plena ascensão econômica.
           </p>
         </div>
