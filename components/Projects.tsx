@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/Button';
-import { ArrowUpRight, CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Cctv, Route, Lightbulb, Home, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Hammer, Zap, Droplets, TreePine, Footprints, Route, Lightbulb, Home, ShieldCheck } from 'lucide-react';
 import patiBg from '../assets/pati.jpg';
 
 export const Projects: React.FC = () => {
@@ -66,47 +66,6 @@ export const Projects: React.FC = () => {
 
             <div className="absolute inset-0 bg-gradient-to-r from-brand-green/30 to-transparent z-10"></div>
 
-            {/* Floating Status Card */}
-            <div className="hidden xl:block absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-2xl border-l-4 border-brand-gold z-20 max-w-xs reveal">
-              <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                <span className="font-serif font-bold text-xl text-brand-green">Obras Aceleradas</span>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Terraplanagem</span>
-                    <span>100%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-gold h-1.5 rounded-full" style={{ width: '100%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Rede de Água</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Pavimentação</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Carousel Indicators */}
             <div className="absolute bottom-8 right-8 flex space-x-2 z-20">
               {carouselImages.map((_, idx) => (
@@ -117,49 +76,6 @@ export const Projects: React.FC = () => {
                   aria-label={`View image ${idx + 1}`}
                 />
               ))}
-            </div>
-          </div>
-
-          {/* Mobile/Tablet Status Card (Positioned Below Images) */}
-          <div className="xl:hidden lg:col-span-12 px-6 mt-6 relative z-20 reveal">
-            <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm shadow-2xl border-l-4 border-brand-gold w-full max-w-md mx-auto">
-              <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Status da Obra</span>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                <span className="font-serif font-bold text-xl text-brand-green">Obras Aceleradas</span>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Terraplanagem</span>
-                    <span>100%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-gold h-1.5 rounded-full" style={{ width: '100%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Rede de Água</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                    <span>Pavimentação</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                    <div className="bg-brand-green h-1.5 rounded-full" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

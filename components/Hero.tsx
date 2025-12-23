@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p className="text-gray-100 text-sm sm:text-base md:text-xl font-sans font-light max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-lg">
-            Um loteamento de alto padrão criado para quem busca mais do que morar: busca <strong>Um Privilégio.</strong>
+            Um loteamento de alto padrão criado para quem busca mais do que morar: busca <strong>um privilégio.</strong>
           </p>
 
           <p className="hidden sm:block text-gray-200 text-sm md:text-lg font-sans font-light max-w-3xl mx-auto leading-relaxed opacity-90 drop-shadow-lg">
